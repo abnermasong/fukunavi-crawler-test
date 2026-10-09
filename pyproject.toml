@@ -1,0 +1,24 @@
+[project]
+name = "fukunavi-crawler"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "google-cloud-storage>=3.13.1",
+    "playwright>=1.62.0",
+    "python-dotenv>=1.2.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "pytest-playwright>=0.9.0",
+]
+
+[tool.uv]
+exclude-newer = "3 days"
+
+[tool.pytest.ini_options]
+pythonpath = "."
